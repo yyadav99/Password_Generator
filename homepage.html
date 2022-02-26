@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="title">Password Generator</h2>
+            <div class="result box">
+                <div class="setting_left result__viewbox" id="generated_password">CLICK GENERATE</div>
+                <div class="setting_rigth"><button id="copy-btn"><i class="fa fa-copy cpy_btn"></i></button></div>
+            </div>
+            <div class="box slider_value" data-min="4" data-max="32">
+                <span class="field-title" >length:
+                    <span id="ranger_value">0</span>
+                </span>
+                <div class="aligni setting_left">4</div>
+                <div>
+                    <input id="ranger_original_value"  type="range" min="4" max="50"  />
+                </div>
+                <div class="aligni setting_rigth">50</div>
+            </div>
+        
+            <div class="settings">
+                <span class="field-title">settings</span>
+                <div class="setting box">
+                    <div class="setting_left">
+                        <label for="uppercase">Include Uppercase</label>
+                    </div>
+                    <div class="setting_rigth">
+                        <input id="uppercaseche" type="checkbox" onclick="checklength()">
+                    </div>
+                </div>
+                <div class="setting box">
+                    <div class="setting_left">
+                        <label for="lowercase">Include Lowercase</label>
+                    </div>
+                    <div class="setting_rigth">
+                        <input type="checkbox" onclick="checklength()" id="lowercase" checked>
+                    </div>
+                </div>
+                <div class="setting box">
+                    <div class="setting_left">
+                        <label for="number">Include Numbers</label>
+                    </div>
+                    <div class="setting_rigth">
+                        <input type="checkbox" id="numbersc" onclick="checklength()">
+                    </div>
+                </div>
+                <div class="setting box">
+                    <div class="setting_left">
+                        <label for="symbol">Include Symbols</label>
+                    </div>
+                    <div class="setting_rigth">
+                        <input type="checkbox" id="symbols" onclick="checklength()">
+                    </div>
+                </div>
+            </div>
+            <button class="btn_generate box" id="generate">Generate Password</button>
+            
+        </div>
+        
+        <script src="code.js" async defer></script>
+    </body>
+</html>
